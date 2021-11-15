@@ -3,7 +3,7 @@
   exports.flattenTree = (function () {
     /**
      * @private
-     * @param {tree} tree
+     * @param {Object} tree
      * @returns {Array} Flatten tree
      */
     function ft(tree) {
