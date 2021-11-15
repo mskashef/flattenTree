@@ -3,8 +3,8 @@
   exports.flattenTree = (function () {
     /**
      * @private
-     * @param {Object} tree
-     * @returns {Array} Flatten tree
+     * @param {Object} tree The Object tree
+     * @returns {Array} The flatten tree
      */
     function ft(tree) {
       const flatten = [tree];
@@ -21,12 +21,66 @@
      * to a flatten array.
      *
      * @example
-     * var {flattenTree} = require('path-to-flatten-tree/' + 'flatten-tree');
-     * console.log(flattenTree({id: 1, children: [{id: 2, children: []}, {id: 3, children: []}]})); // 'ple'
+     * var { flattenTree } = require('./flatten-tree');
+
+     * const tree = {
+     *   id: 1,
+     *   title: 'Root',
+     *   description: 'This is the root node',
+     *   children: [
+     *     {
+     *       id: 2,
+     *       title: 'Level 1 - item 1',
+     *       description: 'Some description',
+     *       children: [
+     *         {
+     *           id: 5,
+     *           title: 'Level 2 - item 1',
+     *           description: 'Some description',
+     *           children: [],
+     *         },
+     *         {
+     *           id: 6,
+     *           title: 'Level 2 - item 2',
+     *           description: 'Some description',
+     *           children: [],
+     *         },
+     *       ],
+     *     },
+     *     {
+     *       id: 3,
+     *       title: 'Level 1 - item 2',
+     *       description: 'Some description',
+     *       children: [
+     *         {
+     *           id: 7,
+     *           title: 'Level 2 - item 1',
+     *           description: 'Some description',
+     *           children: [
+     *             {
+     *               id: 8,
+     *               title: 'Level 3 - item 1',
+     *               description: 'Some description',
+     *               children: [],
+     *             },
+     *           ],
+     *         },
+     *       ],
+     *     },
+     *     {
+     *       id: 4,
+     *       title: 'Level 1 - item 3',
+     *       description: 'Some description',
+     *       children: [],
+     *     },
+     *   ],
+     * };
+     * 
+     * console.log(flattenTree(tree));
      *
      * @public
      * @module flattenTree
-     * @param {Object} tree the source tree.
+     * @param {Object} tree The source tree.
      * @return {Array} Tree elements in flatten format.
      */
     return function (tree) {
