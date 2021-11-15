@@ -22,7 +22,7 @@
      *
      * @example
      * var { flattenTree } = require('./flatten-tree');
-
+     *
      * const tree = {
      *   id: 1,
      *   title: 'Root',
@@ -75,7 +75,7 @@
      *     },
      *   ],
      * };
-     * 
+     *
      * console.log(flattenTree(tree));
      *
      * @public
