@@ -61,6 +61,9 @@ const tree = {
 };
 
 console.log(flattenTree(tree));
+
+// OUTPUT:
+
 ```
 
 The output:
