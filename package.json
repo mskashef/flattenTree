@@ -1,0 +1,23 @@
+{
+  "name": "@mskashef/flatten-tree",
+  "version": "1.1.0",
+  "description": "A light-weight module to convert object trees to flat lists",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "flat",
+    "flatten",
+    "tree",
+    "js",
+    "list",
+    "linear",
+    "object"
+  ],
+  "author": "mskashef",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^28.1.3"
+  }
+}
