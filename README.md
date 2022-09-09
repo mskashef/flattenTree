@@ -5,7 +5,7 @@ A light-weight module to convert object trees to flat lists.
 ## Sample Usage
 
 ```js
-const flattenTree = require("@msk/flatten-tree");
+const flattenTree = require("@mskashef/flatten-tree");
 console.log(
   flattenTree({
     name: "item1",
