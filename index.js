@@ -1,7 +1,7 @@
 function flattenObjectTree(tree, childKeyNames) {
-  const keyNameMap = {};
+  const keyNameSet = new Set();
   for (const keyName of childKeyNames) {
-    keyNameMap[keyName] = true;
+    keyNameSet.add(keyName)
   }
   const flatten = [];
   const stack = [tree];
@@ -10,7 +10,7 @@ function flattenObjectTree(tree, childKeyNames) {
     const node = stack.shift();
     const children = [];
     for (const key of Reflect.ownKeys(node)) {
-      if (keyNameMap[key] === true) {
+      if (keyNameSet.has(key)) {
         children.push(...node[key]);
         delete node[key];
       }
